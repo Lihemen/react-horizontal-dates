@@ -6,7 +6,7 @@ import {
   startOfWeek,
   subWeeks,
 } from "date-fns";
-import React, { useState } from "react";
+import * as React from "react";
 
 import { IconChevronLeft } from "../../icons/chevron-left";
 import { IconChevronRight } from "../../icons/chevron-right";
@@ -30,7 +30,7 @@ export function ReactHorizontalDates({
   nextIcon = <IconChevronRight />,
   classNames = defaultClassNames,
 }: ReactHorizontalDatesProps) {
-  const [currentDate, setCurrentDate] = useState<Date>(intialDate);
+  const [currentDate, setCurrentDate] = React.useState<Date>(intialDate);
   const weeks = Math.floor(days / 7);
 
   const generateWeekeDays = (date: Date) => {
@@ -42,7 +42,7 @@ export function ReactHorizontalDates({
     );
   };
 
-  const [weekDays, setWeekDays] = useState<Date[]>(() =>
+  const [weekDays, setWeekDays] = React.useState<Date[]>(() =>
     generateWeekeDays(currentDate),
   );
 
