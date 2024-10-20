@@ -72,6 +72,9 @@ export default App;
   "title" | "isSelected" | "day" | "dayNumber" | "dayDay" | "week",
   string>>;
 
+  /** start of week */
+  weekStartsOn ?: "sun" | "mon" | "tue" | "wed" | "thu" | "fri" | "sat"
+
   /** icons */
 
   /** previous icon */

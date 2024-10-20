@@ -12,7 +12,7 @@ import { IconChevronLeft } from "../../icons/chevron-left";
 import { IconChevronRight } from "../../icons/chevron-right";
 import { cn } from "../../lib/cn";
 import { calendarHeaderDate } from "../../lib/formatters/header-date";
-import type { ReactHorizontalDatesProps } from "./types";
+import { type ReactHorizontalDatesProps, weekdays } from "./types";
 
 const defaultClassNames: ReactHorizontalDatesProps["classNames"] = {
   isSelected:
@@ -22,6 +22,7 @@ const defaultClassNames: ReactHorizontalDatesProps["classNames"] = {
 export function ReactHorizontalDates({
   intialDate = new Date(),
   days = 7,
+  weekStartsOn = "sun",
   onDateChange = () => {},
   onPrevWeekChange = () => {},
   onNextWeekChange = () => {},
@@ -33,7 +34,9 @@ export function ReactHorizontalDates({
   const weeks = Math.floor(days / 7);
 
   const generateWeekeDays = (date: Date) => {
-    const startOfCurrentWeek = startOfWeek(date, { weekStartsOn: 0 }); // Start week on Sunday
+    const startOfCurrentWeek = startOfWeek(date, {
+      weekStartsOn: weekdays[weekStartsOn],
+    });
     return Array.from({ length: days }, (_, i) =>
       addDays(startOfCurrentWeek, i),
     );
