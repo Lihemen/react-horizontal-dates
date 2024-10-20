@@ -1,1 +1,1 @@
-# react-horizontal-dates
+# react-horizontal-date

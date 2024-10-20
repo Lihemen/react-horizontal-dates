@@ -14,26 +14,26 @@ A simple and customizable horizontal date picker component for React application
 Install the package via npm:
 
 ```bash
-npm install react-horizontal-dates
+npm install react-horizontal-date
 ```
 
 Install the package via yarn:
 
 ```bash
-yarn install react-horizontal-dates
+yarn install react-horizontal-date
 ```
 
 Install the package via pnpm:
 
 ```bash
-pnpm install react-horizontal-dates
+pnpm install react-horizontal-date
 ```
 
 ## Usage
 
 ```jsx
 import React, { useState } from "react";
-import { ReactHorizontalDates } from "react-horizontal-dates";
+import { ReactHorizontalDates } from "react-horizontal-date";
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
