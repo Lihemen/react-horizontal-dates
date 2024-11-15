@@ -17,7 +17,8 @@
     "prepare": "husky",
     "prepublishOnly": "npm run ci",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o dist/storybook",
+    "chromatic": "npx chromatic --project-token="
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -39,6 +40,7 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
+    "chromatic": "^11.18.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "husky": "^9.1.6",
@@ -55,7 +57,11 @@
   "bugs": {
     "url": "https://github.com/lihemen/react-horizontal-dates/issues"
   },
-  "author": "Hemense Lan <lihemen@gmail.com> (https://hemense.net)",
+  "author": {
+    "name": "Hemense Lan",
+    "email": "lihemen@gmail.com",
+    "url": "https://hemense.net"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lihemen/react-horizontal-dates.git"
