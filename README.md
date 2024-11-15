@@ -2,6 +2,8 @@
 
 A simple and customizable horizontal date picker component for React applications.
 
+[![CI](https://github.com/Lihemen/react-horizontal-dates/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Lihemen/react-horizontal-dates/actions/workflows/ci.yml)
+
 ## Features
 
 - Horizontal scrolling date picker
